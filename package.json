@@ -1,0 +1,19 @@
+{
+  "name": "zed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.13",
+    "postcss-preset-env": "^7.5.0",
+    "vite": "^2.9.9"
+  }
+}
