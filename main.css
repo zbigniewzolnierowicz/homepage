@@ -3,7 +3,7 @@
 
 :root {
     /* COLORS */
-    --black: #1A181B;
+    --black: #000000;
     --white: #ffffff;
     --malachite: #53DD6C;
     --polished-pine: #63A088;
@@ -16,7 +16,15 @@
     font-size: 16px;
     color: var(--text-color);
     text-transform: lowercase;
-    font-family: 'PT Serif', serif;
+    font-family: 'VT323', 'Courier New', Courier, monospace;
+}
+
+* {
+    text-transform: lowercase;
+}
+
+.normal-case {
+    text-transform: none;
 }
 
 @media (--small-viewport) {
@@ -37,7 +45,7 @@ html, body {
     background: var(--background-color);
 }
 
-main {
+.main {
     width: 100%;
     padding: 0 20px;
     margin-top: 3em;
@@ -49,11 +57,26 @@ main {
         flex-direction: column;
         text-align: center;
         justify-self: center;
+        color: var(--accent);
     }
+}
+
+.centering {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
     font-size: 3rem;
+    font-family: 'VCR OSD Mono', 'Courier New', Courier, monospace;
 }
 
 :is(h1, h2, h3, h4) .subheading {
@@ -74,9 +97,15 @@ ul.social-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 800px;
     margin-top: 2em;
+    font-size: 20px;
+    justify-content: center;
+}
+
+@media (--large-viewport) {
+    ul.social-grid {
+        font-size: 32px;
+    }
 }
 
 li.social-row {
@@ -85,12 +114,12 @@ li.social-row {
     width: fit-content;
     margin-left: 1ch;
     margin-right: 1ch;
+}
 
-    & a.social-link {
-        text-decoration: underline var(--accent);
-        &, &:active, &:hover {
-            color: var(--text-color);
-        }
+a {
+    text-decoration: underline var(--accent);
+    &, &:active, &:hover {
+        color: var(--text-color);
     }
 }
 
@@ -99,4 +128,44 @@ article {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#friends {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friends-list {
+    text-align: center;
+}
+
+#ideas {
+    & li {
+        list-style-type: "- ";
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    & img:not(:first-of-type) {
+        margin-left: 1ch;
+    }
+}
+
+.youtube {
+    width: 100%;
+    max-width: 560px;
+}
+
+main {
+    margin-bottom: 3rem;
 }
