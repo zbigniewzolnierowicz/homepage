@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/vcr/stylesheet.css">
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+    <script type="module">
+      import { main as weekdaySetup } from './weekdaychecker';
+
+      document.documentElement.dir = document.documentElement.dir || 'ltr';
+      weekdaySetup();
+    </script>
     <title>zed</title>
   </head>
   <body>
@@ -52,13 +58,15 @@
         <img src="./assets/img/hatesquarespace.jpg" alt="I hate Squarespace">
       </div>
     </div>
-    <img src="./assets/img/nonagon-infinity.gif" alt="nonagon infinity" class="spacer centering">
-    <div class="spacer centering text-center">
+    <a href="https://www.youtube.com/watch?v=9p_Si21ig7c">
+      <img src="./assets/img/nonagon-infinity.gif" alt="nonagon infinity" class="spacer centering">
+    </a>
+    <a href="https://www.youtube.com/watch?v=9p_Si21ig7c" class="spacer centering text-center">
       <p>nonagon infinity opens the door</p>
       <p>nonagon infinity opens the door</p>
       <p>wait for the answer to open the door</p>
       <p>nonagon infinity opens the door</p>
-    </div>
+    </a>
     <main>
       <img src="./assets/img/sylveon.png" alt="sylveon" class="spacer centering" style="max-height: 5rem; width: auto;">
       <article id="friends">
@@ -82,16 +90,13 @@
       <article>
         <p>go listen to nonagon infinity, it's a really good album</p>
       </article>
-      <img src="./assets/img/teto tuesday.webp" alt="it's teto tuesday" style="width: auto;" class="centering spacer">
-      <article class="text-center">
-        <p>
-          idc if it's not tuesday
-        </p>
+      <article class="text-center" id="tuesday">
+        <img src="./assets/img/teto tuesday.webp" alt="it's teto tuesday" style="width: auto;" class="centering spacer">
       </article>
-      <iframe class="youtube centering spacer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q8hp2IkI2es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <article class="text-center">
-        <p>idc if it's not thursday either</p>
+      <article class="text-center" id="thursday">
+        <iframe class="youtube centering spacer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q8hp2IkI2es" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </article>
     </main>
+    <div id="mobile-spacer"></div>
   </body>
 </html>
