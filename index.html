@@ -7,96 +7,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fonts/vcr/stylesheet.css">
+    <link rel="stylesheet" href="./assets/fonts/vga8/stylesheet.css">
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
     <script type="module">
-      import { main as weekdaySetup } from './weekdaychecker';
-
-      document.documentElement.dir = document.documentElement.dir || 'ltr';
-      weekdaySetup();
+      import { loadQuoteMachine } from "./quotes"
+      const quotesEl = document.getElementById("quote-machine");
+      loadQuoteMachine(quotesEl);
     </script>
     <title>zed</title>
   </head>
   <body>
-    <div class="main center-grid">
-      <h1 class="page-title">
-        Zed is not dead
-        <span class="subheading">A repository of stupidity</span>
-      </h1>
-      <ul class="social-grid centering">
-        <li class="social-row">
-          <a href="https://github.com/zbigniewzolnierowicz" rel="me" class="social-link">
-            github/zbigniewzolnierowicz
-          </a>
-        </li>
-        <li class="social-row">
-          <a href="https://gitlab.com/zzed" rel="me" class="social-link">
-            gitlab/zzed
-          </a>
-        </li>
-        <li class="social-row">
-          <a href="https://uwu.social/web/@zed" rel="me" class="social-link">
-            uwu.social/zed
-          </a>
-        </li>
-        <li class="social-row">
-          <a href="https://twitter.com/zed_not_dead" rel="me" class="social-link">
-            twitter/zed_not_dead
-          </a>
-        </li>
-        <li class="social-row">
-          <a href="https://0x0000b16b00b5.tumblr.com/" rel="me" class="social-link">
-            tumblr/&lt;too long&gt;
-          </a>
-        </li>
-      </ul>
-      <div class="buttons">
-        <img src="./assets/img/right_to_repair.jpg" alt="I support right to repair">
-        <img src="./assets/img/antinft.webp" alt="This is an anti NFT site">
-        <img src="./assets/img/hatesquarespace.jpg" alt="I hate Squarespace">
+    <header id="header" class="limit-width">
+      <div class="box avatar-box">
+        <img src="/assets/img/avatar.jpg" alt="Avatar" class="avatar-image">
       </div>
+      <div class="box title-box">
+        <h1>
+          zed is not dead
+          <span class="subheading">Repository of stupidity</span>
+        </h1>
+      </div>
+    </header>
+    <div class="limit-width">
+      <p id="quote-machine" class="box text-center">
+        Loading...
+      </p>
     </div>
-    <a href="https://www.youtube.com/watch?v=9p_Si21ig7c">
-      <img src="./assets/img/nonagon-infinity.gif" alt="nonagon infinity" class="spacer centering">
-    </a>
-    <a href="https://www.youtube.com/watch?v=9p_Si21ig7c" class="spacer centering text-center">
-      <p>nonagon infinity opens the door</p>
-      <p>nonagon infinity opens the door</p>
-      <p>wait for the answer to open the door</p>
-      <p>nonagon infinity opens the door</p>
-    </a>
-    <main>
-      <img src="./assets/img/sylveon.png" alt="sylveon" class="spacer centering" style="max-height: 5rem; width: auto;">
-      <article id="friends">
-        <h2>cool people</h2>
-        <ul class="friends-list">
-          <li><a href="https://selfisekai.rocks/">selfisekai</a></li>
-          <li><a href="https://sdomi.pl/">sdomi</a></li>
+    <main class="limit-width">
+      <div class="about-myself">
+        <div class="box flex-left" id="who-am-i-grid">
+          <h2 class="text-center full-width h4">Myself</h2>
+          <dl>
+            <dt>Name</dt>
+            <dd>Zed</dd>
+            <dt>Pronouns</dt>
+            <dd>he/they</dd>
+            <dt>GitHub</dt>
+            <dd><a rel="me" href="https://github.com/zbigniewzolnierowicz/">link</a></dd>
+            <dt>GitLab</dt>
+            <dd><a rel="me" href="https://gitlab.com/zzed">link</a></dd>
+            <dt>Discord</dt>
+            <dd class="normal-case">Zed#0990</dd>
+            <dt>Twitter</dt>
+            <dd><a rel="me" href="https://twitter.com/zed_not_dead">link</a></dd>
+            <dt>Mastodon (uwu.social)</dt>
+            <dd><a rel="me" href="https://uwu.social/web/@zed">link</a></dd>
+            <dt>Tumblr</dt>
+            <dd><a rel="me" href="https://0x0000b16b00b5.tumblr.com/">link</a></dd>
+          </dl>
+          <h2 class="text-center full-width h4">Friends and cool folks</h2>
+          <ul class="friends-list">
+            <li><a href="https://selfisekai.rocks">selfisekai</a></li>
+            <li><a href="https://sdomi.pl">sdomi</a></li>
+          </ul>
+        </div>
+        <div class="box flex-left">
+          <p class="normal-case">
+            My name is Zbigniew, though most people online know me as Zed, due to the sheer unpronounceability of my real name.
+            I'm a non-binary web developer, slightly dabbling in multiple languages, mostly the following:
+          </p>
+          <ul class="list">
+            <li>JavaScript</li>
+            <li>Rust</li>
+            <li>C#</li>
+            <li>Java</li>
+          </ul>
+          <p class="normal-case">
+            I also like sysadminning, having set up a server cluster at home.
+          </p>
+        </div>
+      </div>
+      <div class="box flex-left">
+        <h2 class="text-center full-width">Projects I'm proud of</h2>
+        <ul class="list">
+          <li><a href="https://github.com/zbigniewzolnierowicz/cluster">cluster</a> - Kubernetes and Helm manifests for my personal cluster</li>
+          <li><a href="https://gitlab.com/zzed/Kable-Backend">kable</a> - a Rust server for an unspecified purpose</li>
+          <li><a href="https://mrdecal.zolnierowi.cz">Mr. Decal</a> - a website for my father's decal business</li>
         </ul>
-      </article>
-      <article id="ideas">
-        <h2>
-          Random ideas
-        </h2>
-        <ul>
-          <li>a selfhosted music streaming website, where most of the money goes to the artist</li>
-          <li>maybe set up a mastodon instance? could be fun</li>
-          <li>definitely get LDAP up and running</li>
-        </ul>
-      </article>
-      <img src="./assets/img/gaywindows.webp" alt="windows gay mode" style="width: auto;" class="centering spacer">
-      <article>
-        <p>go listen to nonagon infinity, it's a really good album</p>
-      </article>
-      <article class="text-center" id="tuesday">
-        <img src="./assets/img/teto tuesday.webp" alt="it's teto tuesday" style="width: auto;" class="centering spacer">
-      </article>
-      <article class="text-center" id="thursday">
-        <iframe class="youtube centering spacer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q8hp2IkI2es" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </article>
+      </div>
     </main>
-    <div id="mobile-spacer"></div>
+    <footer id="footer" class="limit-width">
+      <p class="box copyright">
+        © zed is not dead 2022
+      </p>
+      <div class="box license">
+        <p>Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+      </div>
+      <div class="box badges badge-row">
+        <img src="/assets/img/antinft.webp" alt="anti NFT">
+        <img src="/assets/img/hatesquarespace.jpg" alt="hate squarespace">
+        <img src="/assets/img/nonbinary.jpg" alt="nonbinary">
+        <img src="/assets/img/right_to_repair.jpg" alt="right to repair">
+        <img src="/assets/img/thiswebsiteisgay.webp" alt="this website is gay">
+      </div>
+    </footer>
   </body>
 </html>
