@@ -1,7 +1,9 @@
+const quotesURL = new URL('./assets/quotes.txt', import.meta.url).href
+
 const randomElementIndex = (items: any[]): number => Math.floor(Math.random() * items.length);
 
 export const loadQuoteMachine = async (element: HTMLElement) => {
-  const quotes = await fetch("/assets/quotes.txt")
+  const quotes = await fetch(quotesURL)
     .then(res => res.text())
     .then(
       res => res
