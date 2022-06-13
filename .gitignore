@@ -1,5 +1,11 @@
-/.pnpm-debug.log
-/dist
-/node_modules
-# Local Netlify folder
-.netlify
+node_modules
+
+.cache
+.env
+.vercel
+.output
+
+/build/
+/public/build
+/api/index.js
+/api/index.js.map
