@@ -145,6 +145,8 @@ header#header {
         width: 100%;
         height: fit-content;
         justify-self: center;
+        min-width: 200px;
+        min-height: 200px;
 
         & img {
             width: 100%;
